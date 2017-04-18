@@ -7,7 +7,8 @@ from .models import Course
 
 def course_list(request):
 	courses = Course.objects.all()
-	output = ""
-	for course in courses:
-		output = output+" "+str(course.title)
+	# output = ""
+	# for course in courses:
+	# 	output = output+" "+str(course)
+	output = ', '.join([str(course) for course in courses])
 	return HttpResponse(output)
