@@ -10,5 +10,9 @@ def course_list(request):
 	# output = ""
 	# for course in courses:
 	# 	output = output+" "+str(course)
-	output = ', '.join([str(course) for course in courses])
-	return HttpResponse(output)
+
+
+	#output = ', '.join([str(course) for course in courses])
+	# return HttpResponse(output)
+
+	return render(request, 'courses/course_list.html',{'courses':courses})
