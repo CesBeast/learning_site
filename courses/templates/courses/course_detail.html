@@ -7,7 +7,7 @@
 
 <div class="steps">
 {% for step in course.step_set.all %}
-	<p>Title: {{step.title}}</p>
+	<h3>Title: {{step.title}}</h3>
 	<p>Description: {{step.description}}</p>
 {%endfor%}
 </div>
