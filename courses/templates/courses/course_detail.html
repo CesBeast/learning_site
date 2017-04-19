@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %} Course Detail {% endblock %}
+
+{% block content %}
+<h1>{{ course.title }}</h1>
+
+<div class="steps">
+{% for step in course.step_set.all %}
+	<p>Title: {{step.title}}</p>
+	<p>Description: {{step.description}}</p>
+{%endfor%}
+</div>
+{% endblock %}
